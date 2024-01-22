@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Used car</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <!-- <link rel="stylesheet" href="/carpriceprediction/static/css/style.css"> -->
+
+
+</head>
+
+<body>
+    <nav class="nav1">
+        <!-- <ul></ul> -->
+        <div id="logo">Logo</div>
+        <ul>
+            <li><a href="#">
+                    Home
+                </a></li>
+            <li><a href="#">
+                    Services
+                </a></li>
+            <li><a href="#">
+                    About us
+                </a></li>
+            <li><a href="#">
+                    Devloper
+                </a>
+            </li>
+        </ul>
+        <div id="login">Login</div>
+    </nav>
+    <!-- <h4></h4> -->
+    <div id="hi">Petrol:0 , Diesel:1 , CNG:2,Dealer:0 , Individual:1,Manual:0, Automatic:1 </div>
+    <div class="container" id="container1">
+
+        <form action="" method="post">
+            {% csrf_token %}
+            <ul>
+                <li>Enter the Year <input type="number" name="Year" required></li>
+                <li>Enter the Present_Price <input type="number" name="Present_Price" step="any" required></li>
+                <li>Enter the Kms_Driven <input type="number" name="Kms_Driven" step="any" required></li>
+                <li>Enter the Fuel_Type(0,1,2) <input type="number" name="Fuel_Type" required></li>
+                <li>Enter the Seller_Type(0,1) <input type="number" name="Seller_Type" required></li>
+                <li>Enter the Transmission <input type="number" name="Transmission" required></li>
+                <li>Enter the Owner <input type="number" name="Owner" required></li>
+                <button type="submit" class="sb1">CALCULATE</button>
+                <button type="reset" class="sb1">RESET</button>
+            </ul>
+
+        </form>
+
+        {% if result %}
+        <h1>The Selling price is {{result}}</h1>
+        {% endif %}
+        <!-- Enter the Kms driven <input type="number">
+        Enter the Kms driven <input type="number"> -->
+
+    </div>
+    <div id="carimg" class="image-container">
+        {% load static %}
+        <img src="{% static '/img/dodge1.jpg' %}" alt="White Dodge Charger">
+    </div>
+
+
+</body>
+
+</html>
