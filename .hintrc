@@ -4,6 +4,20 @@
   ],
   "hints": {
     "axe/structure": "off",
-    "axe/forms": "off"
+    "axe/forms": "off",
+    "axe/text-alternatives": [
+      "default",
+      {
+        "document-title": "off"
+      }
+    ],
+    "button-type": "off",
+    "axe/name-role-value": [
+      "default",
+      {
+        "link-name": "off",
+        "input-button-name": "off"
+      }
+    ]
   }
 }

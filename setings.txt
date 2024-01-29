@@ -1,0 +1,3 @@
+import os
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]  # added for static folders
+add templates
