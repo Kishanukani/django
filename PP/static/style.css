@@ -186,7 +186,7 @@ body{
     align-items: center;
 }
 
-.submitbtn button
+button
 {
     height: 30px;
     width: 100px;
@@ -253,8 +253,14 @@ body{
     /* display: block; */
 }
 
-.checkresume button{
+button{
     /* color: pink; */
     height: 40px;
     width: 20%;
+}
+
+#op
+{
+    display: inline;
+    padding: 10px;
 }

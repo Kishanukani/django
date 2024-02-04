@@ -15,7 +15,7 @@ def index(request):
     return render(request, "index.html")
 
 
-def resumepage(request):
+def Resume(request):
     return render(request, "Resume.html")
 
 
@@ -24,18 +24,11 @@ def Signup(request):
 
 
 def upload_resume(request):
-    if request.method == "POST" and request.FILES["uploadresume"]:
+    if request.method == "POST" and "uploadresume" in request.FILES:
         upload_resume = request.FILES["uploadresume"]
-
-        # Initialize Firebase Admin SDK
-        cred = credentials.Certificate(settings.FIREBASE_SERVICE_ACCOUNT_KEY_PATH)
-        # firebase_admin.initialize_app(
-        #     cred,
-        #     name="ResumeApp",
-        #     options={"storageBucket": settings.FIREBASE_STORAGE_BUCKET},
-        # )
+        # if request.method == "POST" and request.FILES["uploadresume"]:
+        # upload_resume = request.FILES["uploadresume"]
         bucket = storage.bucket(settings.FIREBASE_STORAGE_BUCKET)
-
         # Store user's resume in Firebase Storage
         filename = upload_resume.name
         blob = bucket.blob(f"userresume/{filename}")
@@ -45,7 +38,7 @@ def upload_resume(request):
     else:
         context = {"resume_uploaded": False}
 
-    return render(request, "upload_resume.html", context)
+    return render(request, "Resume.html", context)
 
 
 # Create your views here.
