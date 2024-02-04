@@ -26,7 +26,11 @@
           method="post"
           enctype="multipart/form-data"
         >
-          {% csrf_token %}
+          {% comment %} isem me atka tha yaha action me path dala hai jisse jab
+          bhi ye form ka submit hoga ,the path will be the current location and
+          the location in the action fir vo jayega urls me path check karga
+          jiska bhi match hoga uska function call karega {% endcomment %}
+          {%csrf_token %}
           <div class="uploadbtn">
             <input
               type="file"
