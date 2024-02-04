@@ -1,49 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resume index</title>
 
-    <link rel="stylesheet" href="/PP/static/style.css">
-    <!-- {% load static %}
-    <link rel="stylesheet" href="{% static '/style.css' %}"> -->
-</head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/style.css' %}" />
+  </head>
 
-<body>
+  <body>
     <nav class="nav1">
-        <!-- <ul></ul> -->
-        <div id="logo">Logo</div>
-        <ul>
-            <li><a href="#">
-                    Home
-                </a></li>
-            <li><a href="#">
-                    Services
-                </a></li>
-            <li><a href="#">
-                    About us
-                </a></li>
-            <li><a href="#">
-                    Devloper
-                </a>
-            </li>
-        </ul>
-        <div id="login"><a href="{% url 'sign_up' %}">Login</a></div>
-        <!-- <div id="login"><a href="{% url 'sign_up' %}">Login</a></div> -->
-
+      <!-- <ul></ul> -->
+      <div id="logo">Logo</div>
+      <ul>
+        <li><a href="#"> Home </a></li>
+        <li><a href="#"> Services </a></li>
+        <li><a href="#"> About us </a></li>
+        <li><a href="#"> Devloper </a></li>
+      </ul>
+      <div id="login"><a href="{% url 'sign_up' %}">Login</a></div>
+      <!-- <div id="login"><a href="{% url 'sign_up' %}">Login</a></div> -->
     </nav>
-    <br>
-    <br>
+    <br />
+    <br />
     <div class="nav1" id="nav2">
-        <ul>
-            <!-- <li id="PlacementPrediction"><a href="{% url 'resume' %}">Placement Prediction</a></li> -->
-            <!-- <li id="Resume"><a href="{% url 'resume' %}">Resume</a></li> -->
-            <li id="Resume"><a href="/PP/templates/Resume.html">Resume</a></li>
-
-        </ul>
+      <ul>
+        <li id="Resume">
+          <a href="{% url 'resumepage' %}">Resume</a>
+        </li>
+        <li id="upload_resume">
+          <a href="{% url 'upload_resume' %}">Upload RESUME 2.0</a>
+        </li>
+        {% comment %}
+        <li id="Resume"><a href="/PP/templates/Resume.html">Resume</a></li>
+        {% endcomment %}
+      </ul>
     </div>
-</body>
-
+  </body>
 </html>
