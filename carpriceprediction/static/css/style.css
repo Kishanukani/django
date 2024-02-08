@@ -1,0 +1,157 @@
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+body{
+    background: #000;
+    color: white;
+}
+.nav1{
+    
+    background-color: green;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    height: 30px;
+    /* justify-content: space-between; This property places the left and right content at the extremes */
+    /* align-items: center; */
+}
+.nav1 li{
+    display: inline;
+    padding:10px 50px ;
+    list-style: none;
+}
+
+
+.nav1 ul
+{
+    margin: 5px 0;
+}
+.nav1 a{
+    /* border: 2px solid black; */
+    text-decoration: none;
+    /* color: black; */
+    color: white;
+
+
+}
+.nav1 a:hover
+{
+    color: black;
+}
+/* .nav1 a:visited
+{
+    color: grey;
+}
+.nav1 a:active
+{
+    color:pink;
+} */
+
+#logo
+{
+    position: absolute;
+    /* border: 2px solid black; */
+    display: inline;
+    /* right: 0; */
+    left: 0;
+    /* margin-left: 10px; */
+    margin: 4px 50px;
+}
+
+#login
+{
+    position: absolute;
+    /* border: 2px solid black; */
+    display: inline;
+    right: 0;
+    margin: 4px 80px;
+
+}
+
+.container
+{
+    /* border: 2px solid pink; */
+    /* display: inline; */
+    /* display: ; */
+   margin-left: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+
+}
+#container1{
+    
+    position: absolute;
+    top: 150px;
+    height: 400px;
+    /* height: 600px; */
+    width: 625px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.sb1 
+{
+
+    /* margin: 10px; */
+    margin:10px auto ;
+    padding: 2px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid pink; */
+
+}
+.container ul li input
+{
+
+    margin-left: 5px;
+    width: 100px;
+}
+
+#hi
+{
+    position: absolute;
+    top: 130px;
+    left: 80px;
+}
+.container ul{
+    /* border: 1px solid lightgreen; */
+
+    /* position: absolute; */
+    /* top: 35px; */
+    /* border: 1px solid; */
+}
+
+.container li{
+    /* border: 1px solid ; */
+    list-style: none;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#carimg img{
+    height:375px;
+    width: 525px;
+    position: relative;
+    top: 121px;
+    left: 650px;
+    /* box-shadow: 0 0 px 8px rgb(146, 37, 37) inset; */
+    /* box */
+    box-shadow: 10px 10px 10px 10px ;
+}
+
+  
